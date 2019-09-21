@@ -1,0 +1,9 @@
+<div  class="card-columns mt-5">
+  <div *ngFor="let song of items" class="card puntero" (click)="getArtistId(song)">
+    <img class="card-img-top" [src]="song.images | noimage" alt="Card">
+    <div class="card-body" >
+      <h5 class=card-title> {{song.name}} </h5>
+      <span  *ngFor="let artist of song.artists" class="badge badge-info">{{artist.name}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<!-- 
+<br><div class="card-columns">
+  <div *ngFor="let song of albums" class="card">
+    <img class="card-img-top" [src]="song.images | noimage" alt="Card">
+    <div class="card-body">
+      <h5 class=card-title> {{song.name}} </h5>
+      <span  *ngFor="let artist of song.artists" class="badge badge-info">{{artist.name}}</span>
+    </div>
+  </div>
+</div> -->
+<app-loading *ngIf="loading" ></app-loading>
+<div class="alert alert-danger aan animated fadeIn">
+  <h3>Error</h3>
+  <p>
+    {{messageError}}
+  </p>
+</div>
+<app-tarjeta [items]="albums" ></app-tarjeta>
